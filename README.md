@@ -1,6 +1,6 @@
-# youtube-devmeetup-vuetify-nuxt
+# devmeetup-vuetify-nuxt
 
-> A dev meeting application buit with Vue + Vuetify + Firebase + Nuxt
+> A dev meeting application built with Vue + Vuetify + Firebase + Nuxt
 
 ## Build Setup
 
