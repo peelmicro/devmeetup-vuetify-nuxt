@@ -10,17 +10,18 @@
     </v-layout>
     <v-layout row wrap class="mt-2">
       <v-flex xs12>          
-        <v-carousel>
+        <v-carousel style="cursor: pointer;">
           <v-carousel-item
             v-for="meetup in meetups"
             :key="meetup.id"
             :src="meetup.imageUrl"
             transition="fade"
             reverse-transition="fade"
+            to="/meetups/1" 
           >
             <v-container class="title">
-              <v-layout row wrap >
-                <v-flex xs12 sm12 class="text-xs-center">
+              <v-layout row wrap>
+                <v-flex xs12 class="text-xs-center">
                   {{meetup.title}}
                 </v-flex>
               </v-layout>    
@@ -30,7 +31,7 @@
       </v-flex>  
     </v-layout>
     <v-layout row wrap class="mt-2">
-      <v-flex xs12 sm12 class="text-xs-center">
+      <v-flex xs12 class="text-xs-center">
         <p>Join our awesome meetups!</p>
       </v-flex>
     </v-layout>    
@@ -61,11 +62,11 @@ export default {
 </script>
 
 <style scoped>
-  .title {
-    background-color: rgba(0,0,0,.5);
-    color: white;
-    font-size: 2em;
-  }
+.title {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2em;
+}
 </style>
 
 
