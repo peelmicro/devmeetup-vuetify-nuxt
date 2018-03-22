@@ -9,14 +9,18 @@ const createStore = () => {
             'https://cdn.images.express.co.uk/img/dynamic/136/590x/travel-activity-Madrid-Spain-nightlife-museums-bars-UploadExpress-Rob-Crossan-658625.jpg',
           id: '3asd342342342',
           title: 'Meetup in Madrid',
-          date: '2018-05-05'
+          date: '2018-05-05',
+          location: 'Madrid',
+          description: 'Madrid is good!'
         },
         {
           imageUrl:
             'https://travel.usnews.com/static-travel/images/destinations/44/empire_state_building_getty_zsolt_hlinka.jpg',
           id: '32314ff4sdsff',
           title: 'Meetup in New York',
-          date: '2018-05-04'
+          date: '2018-05-04',
+          location: 'New York',
+          description: 'New York is good as well!'
         }
       ],
       user: {
