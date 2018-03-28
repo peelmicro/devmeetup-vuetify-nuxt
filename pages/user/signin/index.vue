@@ -1,5 +1,10 @@
 <template>
   <v-container>
+    <v-layout row v-if="authError">
+      <v-flex xs12 sm6 offset-sm3>
+        <err-alert @dismissed="onDismissed" :text="authError.message"></err-alert>
+      </v-flex>
+    </v-layout>    
     <v-layout row>
       <v-flex xs12 sm6 offset-sm3>
         <v-card>
@@ -32,7 +37,16 @@
                 </v-layout>
                 <v-layout row>
                   <v-flex xs12>
-                    <v-btn type="submit">Sign In</v-btn>
+                    <v-btn 
+                      type="submit" 
+                      :disabled="loading" 
+                      :loading="loading"
+                    >
+                      Sign in
+                      <span slot="loader" class="custom-loader">
+                        <v-icon light>cached</v-icon>
+                      </span>
+                    </v-btn>
                   </v-flex>
                 </v-layout>            
               </form>
@@ -55,6 +69,12 @@ export default {
   computed: {
     user () {
       return this.$store.getters.user
+    },
+    loading () {
+      return this.$store.getters.loading
+    },
+    authError () {
+      return this.$store.getters.authError
     }
   },
   watch: {
@@ -70,6 +90,9 @@ export default {
         email: this.email,
         password: this.password
       })
+    },
+    onDismissed () {
+      this.$store.dispatch('clearAuthError')
     }
   }
 }

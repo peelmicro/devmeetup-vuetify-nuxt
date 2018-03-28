@@ -24,6 +24,7 @@ module.exports = {
     ]
   },
   plugins: [
+    '~plugins/core-components.js',
     '~/plugins/vuetify.js',
     '~/plugins/date-filter.js',
     '~/plugins/firebase.js'
