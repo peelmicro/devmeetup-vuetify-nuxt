@@ -51,6 +51,9 @@ export default {
       sideNav: false
     }
   },
+  mounted: function () {
+    this.$store.dispatch('loadMeetups')
+  },
   computed: {
     menuItems () {
       let menuItems = [
