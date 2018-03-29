@@ -47,6 +47,18 @@
             </v-flex>
           </v-layout>
           <v-layout row>
+            <v-flex xs12 sm6 offset-sm3>               
+              <v-text-field
+                name="description"
+                label="Description"
+                id="description"
+                v-model="description"
+                multi-line
+                required
+              ></v-text-field>              
+            </v-flex>
+          </v-layout>          
+          <v-layout row>
             <v-flex xs12 sm6 offset-sm3>
               <h4>Chose a Date and Time</h4>
             </v-flex>
@@ -61,18 +73,6 @@
               <v-time-picker v-model="time"></v-time-picker>
             </v-flex>
           </v-layout>               
-          <v-layout row>
-            <v-flex xs12 sm6 offset-sm3>               
-              <v-text-field
-                name="description"
-                label="Description"
-                id="description"
-                v-model="description"
-                multi-line
-                required
-              ></v-text-field>              
-            </v-flex>
-          </v-layout>
           <v-layout row>
             <v-flex xs12 sm6 offset-sm3>               
               <v-btn 
@@ -105,6 +105,7 @@ function formatTime (date) {
   return ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2)
 }
 export default {
+  middleware: ['auth'],
   data () {
     return {
       title: '',

@@ -27,7 +27,8 @@ module.exports = {
     '~plugins/core-components.js',
     '~/plugins/vuetify.js',
     '~/plugins/date-filter.js',
-    '~/plugins/firebase.js'
+    '~/plugins/firebase.js',
+    '~/plugins/check-already-auth.js'
   ],
   css: ['~/assets/style/app.styl'],
   /*
@@ -38,7 +39,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['~/plugins/vuetify.js', '~/plugins/firebase.js'],
+    vendor: ['~/plugins/vuetify.js', '~/plugins/firebase.js', '~/plugins/check-already-auth.js'],
     extractCSS: true,
     /*
     ** Run ESLint on save
