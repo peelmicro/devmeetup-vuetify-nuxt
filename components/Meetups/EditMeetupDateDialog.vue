@@ -48,10 +48,6 @@ function formatDate (date) {
 
   return [year, month, day].join('-')
 }
-// function formatTime (date) {
-//   var d = new Date(date)
-//   return ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2)
-// }
 export default {
   props: ['meetup'],
   data () {
