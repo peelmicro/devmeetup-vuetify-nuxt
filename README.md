@@ -20,3 +20,7 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out the [Nuxt.js](https://github.com/nuxt/nuxt.js) and [Vuetify.js](https://vuetifyjs.com/) documentation.
+
+## In order to get to know what has been developed follow the course on
+
+https://www.academind.com/learn/vue-js/a-comprehensive-project-with-vuetify-and-firebase/
